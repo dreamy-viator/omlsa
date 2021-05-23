@@ -185,8 +185,8 @@ def omlsa(fin, fout):
 
                 if(tone_flag):
                     lambda_d_global=lambda_d
-                    lambdamin = np.min(np.r_[[lambda_d_global[3:257-3]],[lambda_d_global[:257-6]],[lambda_d_global[6:257]]],axis=0)
-                    lambda_d_global[3:257-3] = lambdamin
+                    lambdamin = np.min(np.r_[[lambda_d_global[3:M21-3]],[lambda_d_global[:M21-6]],[lambda_d_global[6:M21]]],axis=0)
+                    lambda_d_global[3:M21-3] = lambdamin
                     Sy=0.8*Sy + 0.2*Ya2
                     GH0=G_f*(lambda_d_global/(Sy+1e-10))**0.5
                 else:
